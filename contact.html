@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Cheap Home</title>
+<meta name="description" content="Get in touch with the Cheap Home team — office, phone, email and a message form.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="assets/logo-en.png" data-logo-en="assets/logo-en.png" data-logo-he="assets/logo-he.png" alt="Cheap Home">
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-page="about.html" data-i18n="nav.about">About</a>
+      <a href="contact.html" data-page="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="he">עב</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ CONTACT HERO ============ -->
+<section class="hero" style="padding-bottom:20px;">
+  <div class="container text-center reveal" style="max-width:640px; margin:0 auto;">
+    <span class="eyebrow" data-i18n="contact.hero.eyebrow">Get in touch</span>
+    <h1 data-i18n="contact.hero.title">Talk to the people behind the map.</h1>
+    <p class="hero-lead" style="margin-inline:auto;" data-i18n="contact.hero.lead">Questions about a listing, a partnership, or just want to say hi? Our small team answers everything personally.</p>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section style="padding-top:20px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="team.eyebrow">The team</span>
+      <h2 data-i18n="team.title">Meet Cheap Home.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar" data-initials="RS">RS</div>
+        <h3>Roni Shapira</h3>
+        <div class="team-role" data-i18n="role.ceo">Co-Founder & CEO</div>
+        <div class="team-contact">
+          <a href="tel:+972501234567">+972 50-123-4567</a>
+          <a href="mailto:roni@cheaphome.co.il">roni@cheaphome.co.il</a>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar" data-initials="OM">OM</div>
+        <h3>Omer Mizrahi</h3>
+        <div class="team-role" data-i18n="role.cto">Co-Founder & CTO</div>
+        <div class="team-contact">
+          <a href="tel:+972502345678">+972 50-234-5678</a>
+          <a href="mailto:omer@cheaphome.co.il">omer@cheaphome.co.il</a>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar" data-initials="TA">TA</div>
+        <h3>Tamar Avraham</h3>
+        <div class="team-role" data-i18n="role.data">Head of Data</div>
+        <div class="team-contact">
+          <a href="tel:+972503456789">+972 50-345-6789</a>
+          <a href="mailto:tamar@cheaphome.co.il">tamar@cheaphome.co.il</a>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar" data-initials="YG">YG</div>
+        <h3>Yael Golan</h3>
+        <div class="team-role" data-i18n="role.cs">Customer Success</div>
+        <div class="team-contact">
+          <a href="tel:+972504567890">+972 50-456-7890</a>
+          <a href="mailto:yael@cheaphome.co.il">yael@cheaphome.co.il</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT PANEL + FORM ============ -->
+<section class="section-alt">
+  <div class="container">
+    <div class="contact-panel reveal">
+      <div>
+        <h2 data-i18n="contact.panel.title">Company details</h2>
+        <p data-i18n="contact.panel.lead">Prefer email or a phone call? Reach the main office directly.</p>
+        <div class="contact-list">
+          <div>
+            <div class="ci-label" data-i18n="contact.office">Office</div>
+            <div class="ci-value" data-i18n="contact.office.val">12 Rothschild Blvd, Tel Aviv-Yafo</div>
+          </div>
+          <div>
+            <div class="ci-label" data-i18n="contact.phone">Phone</div>
+            <div class="ci-value">+972 3-555-0192</div>
+          </div>
+          <div>
+            <div class="ci-label" data-i18n="contact.email">Email</div>
+            <div class="ci-value">hello@cheaphome.co.il</div>
+          </div>
+          <div>
+            <div class="ci-label" data-i18n="contact.hours">Hours</div>
+            <div class="ci-value" data-i18n="contact.hours.val">Sun–Thu, 09:00–18:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 data-i18n="form.title">Send us a message</h3>
+        <form id="contact-form">
+          <div class="form-row">
+            <label for="f-name" data-i18n="form.name">Full name</label>
+            <input type="text" id="f-name" name="name" required data-i18n-placeholder="form.name" placeholder="Full name">
+          </div>
+          <div class="form-row">
+            <label for="f-email" data-i18n="form.email">Email address</label>
+            <input type="email" id="f-email" name="email" required data-i18n-placeholder="form.email" placeholder="Email address">
+          </div>
+          <div class="form-row">
+            <label for="f-message" data-i18n="form.message">Message</label>
+            <textarea id="f-message" name="message" rows="4" required data-i18n-placeholder="form.message" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block" data-i18n="form.submit">Send message</button>
+          <p class="form-note" id="form-status" data-i18n="form.note">This is a demo form — no data is transmitted.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/icon-white.svg" alt=""><span><span data-i18n="brand.word1">CHEAP</span> <span class="word-2" data-i18n="brand.word2">HOME</span></span></div>
+        <p data-i18n="footer.tagline">Affordable real estate, mapped honestly across Israel.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav">Navigate</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <ul>
+          <li>hello@cheaphome.co.il</li>
+          <li>+972 3-555-0192</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Cheap Home. All rights reserved.</span>
+      <span data-i18n="footer.demo">Demo PropTech MVP</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

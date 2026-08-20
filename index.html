@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheap Home — Affordable Real Estate in Israel</title>
+<meta name="description" content="Cheap Home helps you find affordable, below-market real estate listings across Israel with a live interactive map.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="assets/logo-en.png" data-logo-en="assets/logo-en.png" data-logo-he="assets/logo-he.png" alt="Cheap Home">
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html" data-page="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-page="about.html" data-i18n="nav.about">About</a>
+      <a href="contact.html" data-page="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="he">עב</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">PropTech · Israel</span>
+      <h1><span data-i18n="hero.title.1">Affordable homes,</span><br><span class="hl" data-i18n="hero.title.2">found smarter.</span></h1>
+      <p class="hero-lead" data-i18n="hero.lead">Cheap Home scans thousands of listings across Israel every day and surfaces the ones priced below their neighborhood — so you don't have to.</p>
+      <div class="hero-cta">
+        <a href="#map" class="btn btn-primary" data-i18n="hero.cta.primary">Explore the map</a>
+        <a href="#features" class="btn btn-outline" data-i18n="hero.cta.secondary">How it works</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" data-i18n="hero.stat1.num">11,400+</div><div class="stat-label" data-i18n="hero.stat1.label">Listings tracked</div></div>
+        <div><div class="stat-num" data-i18n="hero.stat2.num">17%</div><div class="stat-label" data-i18n="hero.stat2.label">Avg. below market</div></div>
+        <div><div class="stat-num" data-i18n="hero.stat3.num">42</div><div class="stat-label" data-i18n="hero.stat3.label">Cities covered</div></div>
+      </div>
+    </div>
+
+    <div class="ticker-stack" aria-hidden="true">
+      <div class="deal-card dc-1">
+        <div class="dc-top"><span class="dc-loc" data-i18n="deal1.loc">Haifa · Neve Sha'anan</span><span class="dc-badge" data-i18n="deal1.badge">12% below area</span></div>
+        <div class="dc-price" data-i18n="deal1.price">₪ 980,000</div>
+        <div class="dc-meta" data-i18n="deal1.meta">3 rooms · 75 m²</div>
+      </div>
+      <div class="deal-card dc-2">
+        <div class="dc-top"><span class="dc-loc" data-i18n="deal2.loc">Ashdod · Rova Yud-Alef</span><span class="dc-badge" data-i18n="deal2.badge">9% below area</span></div>
+        <div class="dc-price" data-i18n="deal2.price">₪ 1,050,000</div>
+        <div class="dc-meta" data-i18n="deal2.meta">3 rooms · 80 m²</div>
+      </div>
+      <div class="deal-card dc-3">
+        <div class="dc-top"><span class="dc-loc" data-i18n="deal3.loc">Be'er Sheva · Ramot</span><span class="dc-badge" data-i18n="deal3.badge">15% below area</span></div>
+        <div class="dc-price" data-i18n="deal3.price">₪ 890,000</div>
+        <div class="dc-meta" data-i18n="deal3.meta">4 rooms · 100 m²</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="features.eyebrow">Why Cheap Home</span>
+      <h2 data-i18n="features.title">Built for buyers who do the math.</h2>
+      <p data-i18n="features.lead">Three tools that used to take a real-estate analyst — now built into every search.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">📊</div>
+        <h3 data-i18n="feat1.title">Price-per-meter scoring</h3>
+        <p data-i18n="feat1.body">Every listing is benchmarked against its street and city so you instantly see genuine deals, not just low numbers.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🗺️</div>
+        <h3 data-i18n="feat2.title">Live interactive map</h3>
+        <p data-i18n="feat2.body">Click any city pin to see rooms, type and price without leaving the page — built for fast comparison.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">✅</div>
+        <h3 data-i18n="feat3.title">Verified, no-nonsense data</h3>
+        <p data-i18n="feat3.body">Listings are checked against public registry data, so the price you see is the price that holds up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section id="map" class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="map.eyebrow">Live map</span>
+      <h2 data-i18n="map.title">Find the deal on the map.</h2>
+      <p data-i18n="map.lead">Every pin is a real listing. Click one to open the full property card.</p>
+    </div>
+
+    <div class="map-section-inner reveal">
+      <div class="map-panel">
+        <span class="map-label" data-i18n="map.panel.label">Israel · live listings</span>
+        <div id="israel-map"></div>
+      </div>
+      <div class="map-info">
+        <div class="property-card" id="property-panel"></div>
+        <p class="map-hint" data-i18n="map.hint">Tip: pins pulse gold when a listing is priced below its area average.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2 data-i18n="cta.title">Your next home might be underpriced right now.</h2>
+      <p data-i18n="cta.lead">Set up a free alert and we'll tell you the moment a below-market listing appears in your city.</p>
+      <div class="btn-row">
+        <a href="contact.html" class="btn btn-gold" data-i18n="cta.primary">Get free alerts</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.3); color:#fff;" data-i18n="cta.secondary">Talk to the team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/icon-white.svg" alt=""><span><span data-i18n="brand.word1">CHEAP</span> <span class="word-2" data-i18n="brand.word2">HOME</span></span></div>
+        <p data-i18n="footer.tagline">Affordable real estate, mapped honestly across Israel.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav">Navigate</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <ul>
+          <li>hello@cheaphome.co.il</li>
+          <li>+972 3-555-0192</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Cheap Home. All rights reserved.</span>
+      <span data-i18n="footer.demo">Demo PropTech MVP</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="scripts.js"></script>
+</body>
+</html>
