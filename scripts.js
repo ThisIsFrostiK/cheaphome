@@ -637,12 +637,24 @@
     chatMessagesRendered = true;
   }
 
-  function chatOpen() {
+  const CHAT_SOUND_SRC = "assets/notif-ping.ogg";
+
+  function chatPlayNotifySound() {
+    try {
+      const audio = new Audio(CHAT_SOUND_SRC);
+      audio.volume = 0.5;
+      const p = audio.play();
+      if (p && typeof p.catch === "function") p.catch(function () {});
+    } catch (e) {}
+  }
+
+  function chatOpen(auto) {
     const widget = document.getElementById("chat-widget");
     if (!widget) return;
     widget.classList.add("open");
     chatRenderWelcome(getLang());
     try { sessionStorage.setItem(CHAT_SEEN_KEY, "1"); } catch (e) {}
+    if (auto) chatPlayNotifySound();
     const input = document.getElementById("chat-input");
     if (input && window.innerWidth >= 720) input.focus();
   }
@@ -705,7 +717,7 @@
 
     if (!alreadySeen) {
       setTimeout(function () {
-        if (!widget.classList.contains("open")) chatOpen();
+        if (!widget.classList.contains("open")) chatOpen(true);
       }, 30000);
     }
   }
